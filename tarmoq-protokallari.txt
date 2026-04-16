@@ -1,0 +1,118 @@
+Tarmoq protokollari - bu qurilmalar tomonidan tarmoq 
+orqali bir-biri bilan aloqa qilish uchun ishlatiladigan 
+qoidalar yoki standartlar to'plami.
+
+>>>>>>>>>>>>>(Turli tarmoq protokollari va TCP/IP 
+modeli haqida bilib oling.)<<<<<<<<<<<<<
+
+Tarmoq protokollarining ba'zi misollari:
+
+ - HTTP, veb-brauzer uchun ishlatiladi
+ - SMTP, elektron pochta uchun ishlatiladi
+ - FTP, fayllarni uzatish uchun ishlatiladi
+
+Tarmoq protokollarini keng miqyosda "qatlamlar"ga ajratish 
+mumkin. Har bir qatlam o'zidan pastdagi qatlamga tayanadi 
+va yuqoridagi qatlamga xizmatlar ko'rsatadi.
+
+Tarmoq protokollarini qatlamlarga ajratadigan modellardan 
+biri bu TCP/IP modelidir. U 4 qatlamga ega:
+
+	+---------------------+
+	|   APPLICATION LAYER |
+	+---------------------+
+	| 	TRANSPORT LAYER	  |
+	+---------------------+
+	| 	INTERNET LAYER    |
+	+---------------------+ 
+	| 	LINK LAYER		  |
+	+---------------------+
+Biz har bir qatlamni alohida ko'rib chiqamiz va ba'zi 
+misollarni ham chiqamiz.
+
+-->Bog'lanish qatlami (LINK LAYER)<--
+Keling , eng pastki qavat bo'lgan Bog'lanish qatlamini
+ko'rib chiqaylik 
+	+-----------------------------------+ 
+	| 			LINK LAYER				|
+	+++++++++++++++++++++++++++++++++++++
+	|Example: Ethernet, Wi-Fi, Buetooth |
+	+-----------------------------------+
+
+	U ma'lumotlarni kabel yoki simsiz ulanish kabi 
+	jismoniy vosita orqali yuborish uchun javobgardir.
+
+Bog'lanish qatlami protokollarining ba'zi misollari:
+
+	- Ethernet
+	- Wi-fi
+	- Bluetooth
+
+-->Internet qatlami (INTERNET LAYER)<--
+	+---------------------+
+	| 	INTERNET LAYER    |
+	+++++++++++++++++++++++
+	| Example: IP, ICMP	  |
+	+---------------------+ 
+Internet qatlami keyingi qatlamdir. U ma'lumotlarni 
+to'g'ri manzilga yetkazish uchun turli tarmoqlar bo'ylab yo'naltirish uchun javobgardir.
+
+Internet qatlami havola qatlami tomonidan taqdim 
+etiladigan xizmatlarga tayanadi.
+
+Bu qatlamdagi asosiy protokol Internet protokoli (IP) 
+hisoblanadi. Ammo boshqalar ham mavjud:
+
+ 	- pingICMP, ulanishni sinab ko'rish kabi dasturlar 
+		tomonidan ishlatiladi
+	
+	- ARP, IP manzillarini MAC manzillariga xaritalash 
+		uchun ishlatiladi
+	
+Xo'sh! Biz TCP/IP modelining dastlabki ikkita qatlamini 
+ko'rib chiqdik. Ikkitasi qoldi.
+
+--> Transport qatlami <--
+	+---------------------+
+	| 	TRANSPORT LAYER	  |
+	+++++++++++++++++++++++
+	| Example: TCP, UDP	  |
+	+---------------------+
+
+Bu qatlamning vazifasi ikkita qurilma o'rtasida 
+ishonchli ma'lumotlar uzatishni ta'minlashdir.
+
+Transport qatlami Internet qatlami tomonidan taqdim 
+etiladigan xizmatlarga tayanadi.
+
+Transport qatlami protokollarining eng ko'p 
+ishlatiladiganlari:
+
+TCP, ma'lumotlarni ishonchli yetkazib berish uchun
+UDP, tez, ammo kamroq ishonchli yetkazib berish uchun
+Boshqa bir nechta unchalik mashhur bo'lmaganlari ham 
+mavjud (masalan, RUDP, DCCP va boshqalar), ammo TCP va 
+UDP eng keng tarqalganlaridir.
+
+Xo'sh, oxirgi qatlamimizga o'tamiz!
+
+--> Ilova qatlami <--
+	+--------------------------+
+	|   APPLICATION LAYER 	   |
+	++++++++++++++++++++++++++++
+	| Example: HTTP, SMTP, FTP |
+	+--------------------------+
+Bu biz foydalanadigan amaldagi ilovalarning aksariyati 
+ishlaydigan eng yuqori qatlam.
+
+Ilova qatlami transport qatlamidagi TCP/UDP kabi 
+protokollarga tayanadi.
+
+HTTP, SMTP, FTP va boshqalar barchasi amaliy qatlam 
+protokollaridir.
+```````````````
+-------------------Xulosa------------------------
+Endi siz tarmoq protokollarini 4 qatlamga 
+ajratadigan TCP/IP modeli haqida bilib oldingiz. 
+Ushbu model shuningdek, "Internet protokollari 
+to'plami" deb ham ataladi
